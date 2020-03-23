@@ -97,7 +97,8 @@ blockquote {margin:0; padding:0;}
 </style>
 
 
-<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+<!--<script src="http://localhost:3000/socket.io/socket.io.js"></script>-->
+<script src="/socket.io.js"></script>
 <!-- <script src="http://192.168.0.53:3000/socket.io/socket.io.js"></script> -->
 <!-- <script src="http://localhost:3000/socket.io/socket.io.js"></script> -->
 	
@@ -117,7 +118,7 @@ blockquote {margin:0; padding:0;}
 
 <script>
     //----------------------------------------------------------------------
-    var socket = io.connect();
+    var socket = io.connect('http://52.78.77.203:3000/');
     
     //메시지 이벤트받아서 출력
     socket.on('send_msg', function(data) {
