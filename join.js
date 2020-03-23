@@ -3,12 +3,6 @@ var fs = require('fs');
 var cors = require('cors');
 var app = require('express')();
 
-//SSL 인증 옵션
-var options = {
-	key: fs.readFileSync('./private.key'),
-	cert: fs.readFileSync('./private.crt')
-};
-
 //서버(https) 
 /*var server = require('https').createServer(options, app);*/
 
