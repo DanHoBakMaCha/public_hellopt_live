@@ -1,10 +1,12 @@
 //필요한 모듈 선언
-var fs = require('fs');
 var cors = require('cors');
 var app = require('express')();
 
+
 //http 서버
 var server = require('http').createServer(app);
+var port = port = process.env.PORT || 3000;
+
 
 //크로스 도메인 사용 가능하도록 설정
 app.use(cors());
@@ -142,6 +144,6 @@ io.on('connection', function(socket) {
 });
 
 //서버 3000번 포트 열기
-server.listen(3000, function() {
+server.listen(port, function() {
 	console.log("3000번 포트 열림");
 });
