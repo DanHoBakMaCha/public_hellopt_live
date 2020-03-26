@@ -118,7 +118,7 @@ blockquote {margin:0; padding:0;}
 
 <script>
     //----------------------------------------------------------------------
-    var socket = io.connect('http://52.78.77.203:3000/');
+    var socket = io.connect();
     
     //메시지 이벤트받아서 출력
     socket.on('send_msg', function(data) {
